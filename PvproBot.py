@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from time import sleep
+import pyautogui as pg
 
 import pyttsx3
 import speech_recognition as sr
@@ -44,6 +45,8 @@ class PvproBot:
             b=self.driver.find_element_by_xpath("/html/body/div[1]/div/div[3]/div[3]/div/div[1]/button/span/span").text
             speak("your total coin is")
             speak(b)
+        pg.click(1550,40)
+        speak("pvpro closed")
         
         
 mybot=PvproBot()
